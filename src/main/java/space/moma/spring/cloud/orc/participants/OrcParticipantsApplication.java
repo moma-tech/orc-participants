@@ -3,6 +3,7 @@ package space.moma.spring.cloud.orc.participants;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +20,7 @@ import java.util.stream.Collectors;
  */
 @SpringBootApplication
 @RestController
+@EnableEurekaClient
 public class OrcParticipantsApplication implements CommandLineRunner {
     private static List<Participant> participants = new ArrayList<Participant>();
 
